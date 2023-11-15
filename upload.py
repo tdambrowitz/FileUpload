@@ -30,7 +30,6 @@ def display_page():
 
     st.title('Halo Dashboard - Upload BMS Reports')
     
-
     with st.expander("How do I run the report?"):
         st.write('1. Navigate to the "Job Listing" report (found under "Job Analysis" in BMS)')
         st.write('2. Set the "Date" selector to "Scheduled Onsite"')
