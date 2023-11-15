@@ -96,7 +96,7 @@ def display_page():
 
 
 
-    with st.expander("How do I run the Due In report?"):
+    with st.expander("<b>How do I run the Due In report?</b>", unsafe_allow_html=True):
         st.write('1. Navigate to the "Vehicles Due In" report (found under "Administration" in BMS)')
         st.write('2. Set the "Location" selector to "All Branches"')
         st.write('3. Set the "Report Output Format" selector to "Open With Excel"')
@@ -104,14 +104,14 @@ def display_page():
         st.write('5. Click "Print" then close the excel file that opens (save it somewhere if you want, or navigate to the RUNCLIENT folder.)')
         st.write('6. Come back to this page and upload the file (it should start with "vehicle_due_in" and end with ".csv")')
 
-    with st.expander("How do I run the On-Site report?"):
+    with st.expander("<b>How do I run the On-Site report?</b>", unsafe_allow_html=True):
         st.write('1. Navigate to the "Vehicles On Site" report (found under "Administration" in BMS)')
         st.write('2. Set the "Location" selector to "All Branches"')
         st.write('3. Set the "Report Output Format" selector to "Open With Excel"')
         st.write('4. Click "Print" then close the excel file that opens (save it somewhere if you want, or navigate to the RUNCLIENT folder.)')
         st.write('5. Come back to this page and upload the file (it should start with "vonsite_" and end with ".csv")')
 
-    with st.expander("How do I run the Arrived Yesterday report?"):
+    with st.expander("<b>How do I run the Arrived Yesterday report?</b>", unsafe_allow_html=True):
         st.write('1. Navigate to the "Job Listing" report (found under "Job Analysis" in BMS)')
         st.write('2. Set the "Date" selector to "Onsite"')
         st.write(f'3. Set the "From Date" and "To Date" selectors to {yesterday}')
