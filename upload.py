@@ -28,7 +28,7 @@ if 'is_authenticated' not in st.session_state:
 
 def display_page():
 
-    st.title('Halo Dashboard Report Uploader')
+    st.title('Halo Dashboard - Upload BMS Reports')
 
     # File uploader
     uploaded_file = st.file_uploader("Choose a CSV file", type="csv")
