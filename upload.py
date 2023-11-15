@@ -71,11 +71,25 @@ def display_page():
         else:
             st.error(f'Failed to upload file: {response.content}')
 
+
+    # Calculate the date of the next Friday
+    today = datetime.date.today()
+    days_until_friday = (4 - today.weekday()) % 7  # Calculate days until next Friday
+    next_friday = today + datetime.timedelta(days=days_until_friday)
+
+    # Add one week to the next Friday's date
+    next_friday_plus_one_week = next_friday + datetime.timedelta(weeks=2)
+
+    # Type the date of the next work week
+    due_in_date = next_friday_plus_one_week.strftime('%d/%m/%Y')
         
+
+
     with st.expander("How do I run the Due In report?"):
-        st.write('1. Navigate to the "Job Listing" report (found under "Job Analysis" in BMS)')
-        st.write('2. Set the "Date" selector to "Scheduled Onsite"')
-        st.write('3. Set the "From Date" selector to the current date')
+        st.write('1. Navigate to the "Vehicles Due In" report (found under "Administration" in BMS)')
+        st.write('2. Set the "Location" selector to "All Branches"')
+        st.write('2. Set the "Report Output Format" selector to "Open With Excel"')
+        st.write('3. Set the "Due On Site Or Before" selector to f{due_in_date}')
         st.write('4. Set the "To Date" selector as far out as you want to go (e.g. 4 weeks)')
         st.write('5. Click "Print" then close the excel file that opens (you can save it somewhere if you want)')
         st.write('6. Come back to this page and upload the file (it should start with "job_list" and end with ".csv")')
