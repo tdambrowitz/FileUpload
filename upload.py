@@ -79,7 +79,7 @@ def display_page():
     next_friday = today + datetime.timedelta(days=days_until_friday)
 
     # Add one week to the next Friday's date
-    next_friday_plus_one_week = next_friday + datetime.timedelta(weeks=2)
+    next_friday_plus_one_week = next_friday + datetime.timedelta(weeks=4)
 
     # Type the date of the next work week
     due_in_date = next_friday_plus_one_week.strftime('%d/%m/%Y')
